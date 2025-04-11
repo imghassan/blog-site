@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/bootstrap-logo-png-open-2000.png" type="image/x-icon">
+    <title>iCoder Website</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="./index.html">Blog Site</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Topics
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">HTML</a></li>
+                                <li><a class="dropdown-item" href="#">CSS</a></li>
+                                <li><a class="dropdown-item" href="#">JS</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Support Us</a></li>
+                                <li><a class="dropdown-item" href="#">Write for Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <div class="d-flex ms-3">
+                        <button type="button" class="btn btn-outline-light mx-2" data-bs-toggle="modal"
+                            data-bs-target="#signupModal">
+                            Sign Up
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Log in
+                        </button>
+                    </div>
+                </div>
+        </nav>
+
+
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="loginModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control rounded-3" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Log In</button>
+                            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of
+                                use.</small>
+                            <hr class="my-4">
+                            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#google"></use>
+                                </svg>
+                                Sign up with Google
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                                Sign up with Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#github"></use>
+                                </svg>
+                                Sign up with GitHub
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Sign Up Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="signupModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control rounded-3" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of
+                                use.</small>
+                            <hr class="my-4">
+                            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#google"></use>
+                                </svg>
+                                Sign up with Google
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                                Sign up with Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#github"></use>
+                                </svg>
+                                Sign up with GitHub
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div id="carouselExampleDark" class="carousel carousel-fade slide">
+                <div class="carousel-indicators">
+                    <div>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="images/1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="fw-bold">Welcome to Website</h5>
+                            <p>Best Website for Techonolgy, Web Developemnt Blogs.</p>
+                            <button type="button" class="btn btn-danger">Techonolgy</button>
+                            <button type="button" class="btn btn-primary">Web Development</button>
+                            <button type="button" class="btn btn-success">Tech Fun</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="images/2.jpg" class="d-block w-100" alt="">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="fw-bold">The Best Coding Blog</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                            <button type="button" class="btn btn-danger">Techonolgy</button>
+                            <button type="button" class="btn btn-primary">Web Development</button>
+                            <button type="button" class="btn btn-success">Tech Fun</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/3.jpg" class="d-block w-100" alt="">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="fw-bold">You find Best Blogs Here</h5>
+                            <p>Trendy Article,BLogs and much more.</p>
+                            <button type="button" class="btn btn-danger">Techonolgy</button>
+                            <button type="button" class="btn btn-primary">Web Development</button>
+                            <button type="button" class="btn btn-success">Tech Fun</button </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+        </section>
+        <section id="featured-posts" class="m-3">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary-emphasis">Tech</strong>
+                                <h3 class="mb-0">Best Tech Trends </h3>
+                                <div class="mb-1 text-body-secondary">Nov 12</div>
+                                <p class="card-text mb-auto">In this blog, you will learn Trendy Techonolgy.</p>
+                                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="images/thumb1.jpg" alt="" class="bd-placeholder-img" width="200" height="250"
+                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                                <h3 class="mb-0">Web Designing</h3>
+                                <div class="mb-1 text-body-secondary">Nov 11</div>
+                                <p class="mb-auto">This blog is about web Designing.</p>
+                                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="images/thumb2.jpg" alt="" class="bd-placeholder-img" width="200" height="250"
+                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                                <h3 class="mb-0">Web Designing</h3>
+                                <div class="mb-1 text-body-secondary">Nov 11</div>
+                                <p class="mb-auto">This blog is about web Designing.</p>
+                                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="images/thumb3.jpg" alt="" class="bd-placeholder-img" width="200" height="250"
+                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                                <h3 class="mb-0">Web Designing</h3>
+                                <div class="mb-1 text-body-secondary">Nov 11</div>
+                                <p class="mb-auto">This blog is about web Designing.</p>
+                                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="images/thumb1.jpg" alt="" class="bd-placeholder-img" width="200" height="250"
+                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                                <h3 class="mb-0">Web Designing</h3>
+                                <div class="mb-1 text-body-secondary">Nov 11</div>
+                                <p class="mb-auto">This blog is about web Designing.</p>
+                                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="images/thumb2.jpg" alt="" class="bd-placeholder-img" width="200" height="250"
+                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">&copy; 2025 Company, Inc</p>
+    </footer>
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
